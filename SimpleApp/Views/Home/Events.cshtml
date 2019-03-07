@@ -1,0 +1,26 @@
+﻿@model List<string>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Events</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <div class="panel panel-primary">
+        <h5 class="panel-heading">Timestamps</h5>
+        <table class="table table-condensed table-striped">
+            @foreach (string s in Model)
+            {
+                <tr><td>@s</td></tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
