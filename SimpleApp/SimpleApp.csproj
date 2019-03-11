@@ -122,6 +122,7 @@
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Modules.cshtml" />
+    <Content Include="Views\Home\ModulesList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

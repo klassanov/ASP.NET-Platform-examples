@@ -9,7 +9,7 @@ namespace SimpleApp.Controllers
 {
     public class HomeController : Controller
     {
-        private static readonly string colorSessionKey="color";
+        private static readonly string colorSessionKey = "color";
 
         // GET: Home
         public ActionResult Index()
@@ -38,6 +38,21 @@ namespace SimpleApp.Controllers
         public ActionResult Events()
         {
             return View(GetTimestamps());
+        }
+
+        public ActionResult ModulesList()
+        {
+            var modules = HttpContext.ApplicationInstance.Modules;
+            Tuple<string, string>[] data =
+                modules.AllKeys
+                    .Select(x =>
+                  new Tuple<string, string>(
+                      x.StartsWith("__Dynamic") ? x.Split('_', ',')[3] : x,
+                      modules[x].GetType().Name)
+                ).OrderBy(x => x.Item1)
+                .ToArray();
+
+            return View(data);
         }
 
         private List<string> GetTimestamps()
