@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 
 
-[assembly: PreApplicationStartMethod(typeof(CommonModules.ModuleRegistration), "RegisterModule")]
+//[assembly: PreApplicationStartMethod(typeof(CommonModules.ModuleRegistration), "RegisterModule")]
 
 namespace CommonModules
 {   
