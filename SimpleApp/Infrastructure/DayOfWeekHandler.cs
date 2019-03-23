@@ -4,7 +4,7 @@ using System.Web;
 
 namespace SimpleApp.Infrastructure
 {
-    public class DayOfWeekHandler : IHttpHandler
+    public class DayOfWeekHandler : IHttpHandler, IRequiresDate
     {
         /// <summary>
         /// You will need to configure this handler in the Web.config file of your 
